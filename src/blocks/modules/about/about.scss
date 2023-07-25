@@ -1,0 +1,17 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-bottom: 30px;
+    padding: 62px 37px 0 65px;
+  }
+  &__gallery {
+    display: flex;
+    column-gap: 5px;
+  }
+}

@@ -1,0 +1,24 @@
+.section {
+  position: relative;
+
+  &--split {
+    display: flex;
+  }
+
+  &--business {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background-color: $primary;
+      background-image: url('../assets/images/section-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+}

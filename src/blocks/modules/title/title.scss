@@ -1,0 +1,12 @@
+.title {
+  margin-bottom: 47px;
+  font-size: 48px;
+  font-weight: 700;
+  color: $primary;
+  text-transform: uppercase;
+
+  &--small {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+}

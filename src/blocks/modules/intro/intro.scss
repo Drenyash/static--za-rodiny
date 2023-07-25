@@ -1,0 +1,28 @@
+.intro {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 100px 80px;
+  background-image: url('../assets/images/intro-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 108px;
+  }
+
+  &__title {
+    font-size: 44px;
+    color: $light;
+    text-align: right;
+    font-weight: 300;
+    text-transform: uppercase;
+    span {
+      font-weight: 600;
+    }
+  }
+}

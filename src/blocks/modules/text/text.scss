@@ -1,0 +1,7 @@
+.text {
+  display: inline-block;
+  color: $primary;
+  &:not(:last-of-type) {
+    margin-bottom: 23px;
+  }
+}

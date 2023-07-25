@@ -1,0 +1,37 @@
+.section-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 2);
+
+  &.invert {
+    * {
+      color: $light !important;
+    }
+  }
+
+  &--blue {
+    background: $primary;
+    background-image: url('../assets/images/section-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    * {
+      color: $light !important;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0;
+    right: 48px;
+    display: flex;
+    width: auto;
+    height: 279px;
+  }
+}

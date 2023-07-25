@@ -1,0 +1,88 @@
+.graph {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  column-gap: 5px;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    &--red {
+      .graph__plate {
+        background-color: $red;
+      }
+    }
+    &:nth-child(1) {
+      .graph__plate {
+        height: 40px;
+      }
+    }
+    &:nth-child(2) {
+      .graph__plate {
+        height: 42px;
+      }
+    }
+    &:nth-child(3) {
+      .graph__plate {
+        height: 44.5px;
+      }
+    }
+    &:nth-child(4) {
+      .graph__plate {
+        height: 46px;
+      }
+    }
+    &:nth-child(5) {
+      .graph__plate {
+        height: 53px;
+      }
+    }
+    &:nth-child(6) {
+      .graph__plate {
+        height: 66px;
+      }
+    }
+    &:nth-child(7) {
+      .graph__plate {
+        height: 78px;
+      }
+    }
+    &:nth-child(8) {
+      .graph__plate {
+        height: 89px;
+      }
+    }
+    &:nth-child(9) {
+      .graph__plate {
+        height: 99px;
+      }
+    }
+    &:nth-child(10) {
+      .graph__plate {
+        height: 161px;
+      }
+    }
+    &:nth-child(11) {
+      .graph__plate {
+        height: 193px;
+      }
+    }
+    &:nth-child(12) {
+      .graph__plate {
+        height: 206px;
+      }
+    }
+  }
+  &__plate {
+    display: flex;
+    background-color: $light;
+    width: 30px;
+    height: 50px;
+  }
+
+  &__data {
+    font-size: 14px;
+  }
+}
