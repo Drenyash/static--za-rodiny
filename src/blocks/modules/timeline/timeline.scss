@@ -2,30 +2,35 @@
   position: relative;
   display: flex;
   justify-content: space-between;
+  gap: 3px;
   margin: 0 auto;
   width: 100%;
   z-index: 2;
 
-  &::before {
-    position: absolute;
-    left: 27px;
-    top: 76px;
-    content: '';
-    display: flex;
-    width: 95%;
-    height: 10px;
-    background-color: $red;
-    transform: translateY(-50%);
+  @include r(1200) {
+    overflow-x: scroll;
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    flex-grow: 1;
+    margin-top: 29px;
     z-index: 1;
-    &:nth-child(7) {
-      margin-right: 68px;
+
+    @include r(1200) {
+      min-width: 120px;
     }
+
+    &:nth-child(7) {
+      padding-right: 68px;
+
+      @include r(1200) {
+        padding-right: 0;
+      }
+    }
+
     &::before {
       content: '';
       display: flex;
@@ -36,13 +41,48 @@
       border-radius: 50%;
       border: 5px solid $primary;
       background-color: $primary;
+      z-index: 1;
+    }
+
+    &::after {
+      position: absolute;
+      left: 5px;
+      top: 41px;
+      content: '';
+      display: flex;
+      width: 100%;
+      height: 10px;
+      background-color: $red;
+      transform: translateY(-50%);
+      z-index: 0;
     }
 
     &--light {
       color: $light;
+      .timeline__text {
+        color: $light;
+        @include r(1200) {
+          color: $primary;
+        }
+      }
+      .timeline__date {
+        color: $light;
+        @include r(1200) {
+          color: $primary;
+        }
+      }
+
+      @include r(1200) {
+        color: $primary;
+      }
+
       &::before {
         border-color: $light;
         background-color: $light;
+        @include r(1200) {
+          border-color: $primary;
+          background-color: $primary;
+        }
       }
     }
 
@@ -50,25 +90,48 @@
       margin-top: 3px;
 
       &::before {
+        margin-bottom: 9px;
         width: 30px;
         height: 30px;
         border-color: $red;
-        background-color: $light;
+        background-color: transparent;
       }
 
       .timeline__date {
-        font-size: 32px;
+        font-size: 38px;
+        margin-bottom: 6px;
+      }
+
+      &::after {
+        left: 26px;
+        top: 67px;
+      }
+      &:last-of-type {
+        flex-grow: 0;
+        margin-right: -35px;
+        &::after {
+          display: none;
+        }
       }
     }
   }
 
   &__text {
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    color: $primary;
+
+    @include r(1200) {
+      br {
+        display: none;
+      }
+    }
   }
 
   &__date {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     font-size: 20px;
     order: -1;
+    color: $primary;
   }
 }

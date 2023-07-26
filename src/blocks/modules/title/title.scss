@@ -1,12 +1,17 @@
 .title {
-  margin-bottom: 47px;
+  margin-bottom: 34px;
   font-size: 48px;
   font-weight: 700;
+  letter-spacing: 1px;
   color: $primary;
   text-transform: uppercase;
 
+  @include r(1200) {
+    font-size: 32px;
+  }
+
   &--small {
-    margin-bottom: 15px;
-    font-size: 20px;
+    margin-bottom: 6px;
+    font-size: 19px;
   }
 }

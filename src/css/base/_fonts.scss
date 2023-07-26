@@ -1,1 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@font-face {
+  font-family: 'Din Pro';
+  src: url('../assets/fonts/DINPro.woff') format('woff'),
+  url('../assets/fonts/DINPro.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Din Pro';
+  src: url('../assets/fonts/DINPro-Medium.woff') format('woff'),
+  url('../assets/fonts/DINPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Din Pro';
+  src: url('../assets/fonts/DINPro-Bold.woff') format('woff'),
+  url('../assets/fonts/DINPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Din Pro';
+  src: url('../assets/fonts/DINPro-Light.woff') format('woff'),
+  url('../assets/fonts/DINPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}

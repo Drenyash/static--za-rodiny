@@ -1,24 +1,31 @@
 .history {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
   display: flex;
   flex-direction: column;
-  padding-left: 65px;
-  width: calc(100% - 65px);
+  padding: 0 61px;
+  grid-column: span 2;
+
+  @include r(1200) {
+    padding: 0 20px;
+  }
+
   &:nth-child(2) {
     padding-right: 65px;
   }
 
   &__lines {
     display: flex;
-    column-gap: 75px;
+    justify-content: space-between;
+    column-gap: 78px;
+    margin-bottom: 2px;
+
+    @include r(1200) {
+      display: none;
+    }
   }
 
   &__line {
     display: flex;
-    margin-bottom: 20px;
-    width: 50%;
+    width: 100%;
     height: 10px;
     background-color: $primary;
 

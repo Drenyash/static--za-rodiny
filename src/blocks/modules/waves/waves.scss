@@ -1,0 +1,33 @@
+.waves {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+
+  @include r(1200) {
+    display: none;
+  }
+  &__side {
+    display: flex;
+    align-items: flex-start;
+    width: 50%;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--short {
+      justify-content: flex-end;
+      img {
+        width: 34%;
+        object-position: left;
+      }
+    }
+  }
+}

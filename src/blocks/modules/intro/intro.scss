@@ -3,16 +3,25 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  padding: 100px 80px;
+  padding: 62px 106px;
   background-image: url('../assets/images/intro-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 
+  @include r(1200) {
+    padding: 20px;
+  }
+
   &__logo {
     position: absolute;
     top: 0;
     right: 108px;
+
+    @include r(1200) {
+      right: 20px;
+      height: 180px;
+    }
   }
 
   &__title {
@@ -21,6 +30,9 @@
     text-align: right;
     font-weight: 300;
     text-transform: uppercase;
+    @include r(1200) {
+      font-size: 24px;
+    }
     span {
       font-weight: 600;
     }

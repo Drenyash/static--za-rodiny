@@ -1,29 +1,136 @@
 .business {
+  position: relative;
   display: flex;
   flex-direction: column;
   color: $primary;
+  padding-top: 55px;
+  z-index: 1;
+
+  @include r(1200) {
+    padding-top: 20px;
+  }
+
+  //&::after {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  right: 0;
+  //  display: flex;
+  //  width: 67%;
+  //  height: 163px;
+  //  background-image: url('../assets/images/waves.svg');
+  //  background-repeat: repeat-x;
+  //  background-color: transparent;
+  //  z-index: 0;
+  //
+  //  @include r(1200) {
+  //    display: none;
+  //  }
+  //}
 
   .title {
+    margin-bottom: 67px;
+    padding-left: 27px;
+    line-height: 1;
     color: $light;
+    @include r(1200) {
+      margin-bottom: 30px;
+      color: $primary;
+    }
   }
 
   &__way {
     display: grid;
-    grid-template-columns: repeat(6, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
+    gap: 10px;
+    margin-bottom: 22px;
+    padding: 0 20px;
+
+    @include r(1200) {
+      gap: 20px;
+      padding: 20px;
+      position: relative;
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $primary;
+        background-image: url('../assets/images/section-bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+      }
+    }
+
+    @include r(768) {
+      display: flex;
+      flex-direction: column;
+      br {
+        display: none;
+      }
+    }
   }
 
   &__item {
     display: flex;
     flex-direction: column;
+    @include r(1200) {
+      color: $light;
+    }
+
     &--light {
       color: $light;
+      .business__icon {
+        fill: $light;
+      }
+    }
+
+    &:nth-child(1) {
+      .business__icon {
+        width: 80px;
+      }
+    }
+
+    &:nth-child(2) {
+      .business__icon {
+        width: 150px;
+      }
+    }
+
+    &:nth-child(3) {
+      .business__icon {
+        width: 122px;
+      }
+    }
+
+    &:nth-child(4) {
+      .business__icon {
+        width: 112px;
+      }
+    }
+
+    &:nth-child(5) {
+      .business__icon {
+        width: 86px;
+      }
+    }
+
+    &:nth-child(6) {
+      .business__icon {
+        width: 51px;
+      }
     }
   }
 
   &__date {
     margin-bottom: 7px;
-    font-size: 18px;
+    font-size: 16px;
+
     &::after {
       content: '';
       background-image: url('../assets/images/icon-arrow.svg');
@@ -41,43 +148,67 @@
       margin-bottom: 22px;
     }
   }
+
   &__title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   &__about {
     display: flex;
     flex-direction: column;
+
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 7px;
     }
   }
-  
+
   &__picture {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
     margin-bottom: 30px;
-    min-height: 150px;
-    img {
-      display: flex;
-      margin-bottom: 17px;
-      height: 61px;
+    min-height: 120px;
+    max-width: 160px;
+    @include r(1200) {
+      min-height: auto;
     }
+
+    svg {
+      display: flex;
+      margin-bottom: 12px;
+      height: 61px;
+      fill: $primary;
+
+      @include r(1200) {
+        fill: $light;
+      }
+    }
+
     p {
       font-weight: 700;
-      font-size: 24px;
+      font-size: 20px;
       text-transform: uppercase;
     }
   }
 
   &__gallery {
     display: grid;
-    grid-template-columns: repeat(6, minmax(300px, 1fr));
+    grid-template-columns: repeat(6, minmax(150px, 1fr));
     gap: 18px;
     width: 100%;
+    padding: 0 20px;
+
+    @include r(1200) {
+      gap: 10px;
+      padding-bottom: 20px;
+      grid-template-columns: repeat(3, minmax(150px, 1fr));
+    }
+
+    @include r(768) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 
   &__image {
@@ -92,5 +223,9 @@
       object-fit: cover;
       object-position: center;
     }
+  }
+
+  &__text {
+    font-size: 15px;
   }
 }

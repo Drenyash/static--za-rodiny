@@ -4,11 +4,18 @@
   right: 0;
   display: flex;
   column-gap: 5px;
+  width: 84%;
+  @include r(1200) {
+    width: 100%;
+    position: static;
+  }
   &__item {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
     flex-shrink: 0;
+    width: calc((100% - $gaps-count) / 12);
     &--red {
       .graph__plate {
         background-color: $red;
@@ -77,12 +84,13 @@
   }
   &__plate {
     display: flex;
+    margin-bottom: 5px;
     background-color: $light;
-    width: 30px;
+    width: 100%;
     height: 50px;
   }
 
   &__data {
-    font-size: 14px;
+    font-size: 10px;
   }
 }

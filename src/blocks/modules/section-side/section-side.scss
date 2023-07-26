@@ -2,21 +2,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: calc(100% / 2);
 
   &.invert {
-    * {
-      color: $light !important;
-    }
-  }
-
-  &--blue {
-    background: $primary;
-    background-image: url('../assets/images/section-bg.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-
     * {
       color: $light !important;
     }
@@ -26,6 +13,23 @@
     width: 100%;
   }
 
+  &--mob-blue {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #22396B;
+      background-image: url(../assets/images/section-bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+    }
+  }
+
   &__logo {
     position: absolute;
     top: 0;
@@ -33,5 +37,10 @@
     display: flex;
     width: auto;
     height: 279px;
+    z-index: 1;
+
+    @include r(1200) {
+      display: none;
+    }
   }
 }

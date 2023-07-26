@@ -103,4 +103,7 @@ button {
 .full-page {
     height: 100vh;
     max-height: 940px;
+    @include r(1200) {
+        height: 400px;
+    }
 }
